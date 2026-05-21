@@ -1,98 +1,364 @@
-# Política de Privacidade – Call Firewall
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Política de Privacidade do aplicativo Call Firewall." />
+  <title>Política de Privacidade | Call Firewall</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #111827;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --accent: #06b6d4;
+      --border: #e5e7eb;
+      --soft: #f8fafc;
+      --info-bg: #ecfeff;
+      --info-border: #a5f3fc;
+      --shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+      --radius: 18px;
+      --max-width: 980px;
+    }
 
-Última atualização: 21 de maio de 2026
+    * { box-sizing: border-box; }
 
-O Call Firewall é um aplicativo de bloqueio e gerenciamento de chamadas desenvolvido pela PRZM Software.
+    html { scroll-behavior: smooth; }
 
-Esta Política de Privacidade explica quais dados o aplicativo pode acessar, como esses dados são usados e quais controles estão disponíveis ao usuário.
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.26), transparent 32rem),
+        radial-gradient(circle at top right, rgba(6, 182, 212, 0.18), transparent 28rem),
+        linear-gradient(180deg, var(--bg) 0%, #111827 300px, #f3f4f6 300px, #f3f4f6 100%);
+      line-height: 1.7;
+    }
 
-## 1. Dados acessados ou armazenados pelo aplicativo
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-O Call Firewall pode acessar ou armazenar localmente os seguintes dados, conforme o uso do aplicativo:
+    .page {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
 
-- número de telefone de chamadas recebidas, quando necessário para aplicar regras de bloqueio;
-- regras de bloqueio criadas pelo usuário;
-- regras simples e avançadas;
-- grupos, condições, prioridades e agendas de regras;
-- histórico local de chamadas bloqueadas;
-- configurações do aplicativo, como tema, região, modo de bloqueio e preferências de backup;
-- arquivos de backup ou compartilhamento de regras criados pelo próprio usuário.
+    .hero {
+      color: #fff;
+      padding: 28px 0 34px;
+    }
 
-O aplicativo não coleta contatos da agenda do usuário, não acessa mensagens SMS, não acessa localização, não acessa câmera, não acessa microfone e não realiza gravação de chamadas.
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
 
-## 2. Como os dados são usados
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+      font-size: 22px;
+    }
 
-Os dados são usados exclusivamente para:
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
 
-- identificar chamadas recebidas;
-- aplicar regras de bloqueio configuradas pelo usuário;
-- exibir histórico de chamadas bloqueadas;
-- permitir backup e restauração das regras e configurações;
-- permitir compartilhamento de regras quando iniciado pelo próprio usuário;
-- manter preferências locais do aplicativo.
+    .hero p {
+      max-width: 720px;
+      margin: 0;
+      color: #dbeafe;
+      font-size: 1.08rem;
+    }
 
-## 3. Armazenamento dos dados
+    .meta-card {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-Os dados do Call Firewall são armazenados localmente no dispositivo do usuário.
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      color: #e0f2fe;
+      border-radius: 999px;
+      padding: 8px 14px;
+      backdrop-filter: blur(10px);
+      font-size: 0.94rem;
+    }
 
-O aplicativo não envia automaticamente números de telefone, histórico de chamadas, regras ou configurações para servidores próprios da PRZM Software.
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
 
-Quando o usuário usa funções de backup, restauração ou compartilhamento, os dados podem ser salvos ou enviados para o local ou aplicativo escolhido pelo próprio usuário, como Google Drive, e-mail, mensageiros ou gerenciadores de arquivos.
+    .toc {
+      position: sticky;
+      top: 20px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
 
-## 4. Compartilhamento de dados
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      color: #111827;
+    }
 
-O Call Firewall não vende dados pessoais do usuário.
+    .toc ol {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
 
-O aplicativo não compartilha automaticamente dados pessoais com terceiros.
+    .toc li { margin: 8px 0; }
 
-O compartilhamento só ocorre quando o próprio usuário utiliza uma função do sistema, como:
+    .content {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
 
-- exportar backup;
-- importar backup;
-- compartilhar regras;
-- salvar arquivo em outro aplicativo ou serviço.
+    .notice {
+      margin: 0;
+      padding: 20px 24px;
+      background: var(--info-bg);
+      border-bottom: 1px solid var(--info-border);
+      color: #155e75;
+    }
 
-Nesses casos, o tratamento dos dados pelo aplicativo ou serviço escolhido pelo usuário fica sujeito à política de privacidade desse terceiro.
+    .notice strong { color: #164e63; }
 
-## 5. Backup do Android
+    section {
+      padding: 26px 32px;
+      border-bottom: 1px solid var(--border);
+    }
 
-Se o backup do Android estiver ativado no dispositivo, o sistema operacional poderá realizar backup automático de dados do aplicativo na conta Google do usuário, conforme as configurações do próprio Android.
+    section:last-child { border-bottom: 0; }
 
-O usuário pode gerenciar esse recurso nas configurações do dispositivo e da conta Google.
+    h2 {
+      margin: 0 0 12px;
+      color: #111827;
+      font-size: 1.36rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
 
-## 6. Compras no aplicativo
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
 
-O Call Firewall pode oferecer recursos pagos, como desbloqueio da área Pro.
+    ul { margin: 12px 0 0; padding-left: 22px; }
+    li { margin: 8px 0; }
 
-As compras são processadas pelo Google Play. O aplicativo não coleta nem armazena dados de cartão de crédito ou informações financeiras do usuário.
+    .highlight {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-top: 14px;
+    }
 
-## 7. Segurança
+    .footer {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.95rem;
+      padding: 30px 0 0;
+    }
 
-O aplicativo utiliza mecanismos locais do Android para armazenar seus dados.
+    .footer strong { color: #334155; }
 
-Embora sejam adotadas práticas razoáveis de segurança, nenhum método de armazenamento ou transmissão é completamente seguro. O usuário deve proteger seu dispositivo com senha, biometria ou outro método de bloqueio.
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+    }
 
-## 8. Crianças
+    @media (max-width: 560px) {
+      .page { width: min(100% - 20px, var(--max-width)); padding-top: 24px; }
+      .hero { padding-top: 18px; }
+      section { padding: 22px 20px; }
+      .notice { padding: 18px 20px; }
+      .brand-icon { width: 38px; height: 38px; }
+    }
 
-O Call Firewall não é direcionado a crianças menores de 13 anos.
+    @media print {
+      body { background: #fff; }
+      .hero { color: #111827; }
+      .hero p, .pill { color: #334155; }
+      .toc, .content { box-shadow: none; }
+      .toc { position: static; }
+      a { color: #111827; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="brand" aria-label="Call Firewall">
+        <span class="brand-icon" aria-hidden="true">☎</span>
+        <span>Call Firewall</span>
+      </div>
+      <h1>Política de Privacidade</h1>
+      <p>Esta política explica quais dados o Call Firewall pode acessar, como esses dados são usados e quais controles estão disponíveis ao usuário.</p>
+      <div class="meta-card" aria-label="Informações da política">
+        <span class="pill">Última atualização: 21 de maio de 2026</span>
+        <span class="pill">Desenvolvedor: PRZM Software</span>
+        <span class="pill">Aplicativo: Call Firewall</span>
+      </div>
+    </header>
 
-O aplicativo é destinado a usuários capazes de configurar regras de chamadas e permissões do dispositivo.
+    <div class="layout">
+      <aside class="toc" aria-label="Índice">
+        <h2>Índice</h2>
+        <ol>
+          <li><a href="#dados">Dados acessados ou armazenados</a></li>
+          <li><a href="#uso">Como os dados são usados</a></li>
+          <li><a href="#armazenamento">Armazenamento dos dados</a></li>
+          <li><a href="#compartilhamento">Compartilhamento de dados</a></li>
+          <li><a href="#backup-android">Backup do Android</a></li>
+          <li><a href="#compras">Compras no aplicativo</a></li>
+          <li><a href="#seguranca">Segurança</a></li>
+          <li><a href="#criancas">Crianças</a></li>
+          <li><a href="#exclusao">Exclusão de dados</a></li>
+          <li><a href="#alteracoes">Alterações nesta política</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ol>
+      </aside>
 
-## 9. Exclusão de dados
+      <article class="content">
+        <p class="notice"><strong>Resumo:</strong> o Call Firewall usa os dados localmente no dispositivo para bloquear chamadas, gerenciar regras, permitir backup/restauração e compartilhar regras quando iniciado pelo próprio usuário.</p>
 
-O usuário pode excluir dados diretamente no aplicativo, usando as opções de limpeza disponíveis.
+        <section id="introducao">
+          <h2>Introdução</h2>
+          <p>O Call Firewall é um aplicativo de bloqueio e gerenciamento de chamadas desenvolvido pela PRZM Software.</p>
+          <p>Esta Política de Privacidade explica quais dados o aplicativo pode acessar, como esses dados são usados e quais controles estão disponíveis ao usuário.</p>
+        </section>
 
-O usuário também pode remover todos os dados do aplicativo desinstalando o Call Firewall ou limpando os dados do aplicativo nas configurações do Android.
+        <section id="dados">
+          <h2>1. Dados acessados ou armazenados pelo aplicativo</h2>
+          <p>O Call Firewall pode acessar ou armazenar localmente os seguintes dados, conforme o uso do aplicativo:</p>
+          <ul>
+            <li>número de telefone de chamadas recebidas, quando necessário para aplicar regras de bloqueio;</li>
+            <li>regras de bloqueio criadas pelo usuário;</li>
+            <li>regras simples e avançadas;</li>
+            <li>grupos, condições, prioridades e agendas de regras;</li>
+            <li>histórico local de chamadas bloqueadas;</li>
+            <li>configurações do aplicativo, como tema, região, modo de bloqueio e preferências de backup;</li>
+            <li>arquivos de backup ou compartilhamento de regras criados pelo próprio usuário.</li>
+          </ul>
+          <div class="highlight">O aplicativo não coleta contatos da agenda do usuário, não acessa mensagens SMS, não acessa localização, não acessa câmera, não acessa microfone e não realiza gravação de chamadas.</div>
+        </section>
 
-## 10. Alterações nesta política
+        <section id="uso">
+          <h2>2. Como os dados são usados</h2>
+          <p>Os dados são usados exclusivamente para:</p>
+          <ul>
+            <li>identificar chamadas recebidas;</li>
+            <li>aplicar regras de bloqueio configuradas pelo usuário;</li>
+            <li>exibir histórico de chamadas bloqueadas;</li>
+            <li>permitir backup e restauração das regras e configurações;</li>
+            <li>permitir compartilhamento de regras quando iniciado pelo próprio usuário;</li>
+            <li>manter preferências locais do aplicativo.</li>
+          </ul>
+        </section>
 
-Esta Política de Privacidade pode ser atualizada periodicamente.
+        <section id="armazenamento">
+          <h2>3. Armazenamento dos dados</h2>
+          <p>Os dados do Call Firewall são armazenados localmente no dispositivo do usuário.</p>
+          <p>O aplicativo não envia automaticamente números de telefone, histórico de chamadas, regras ou configurações para servidores próprios da PRZM Software.</p>
+          <p>Quando o usuário usa funções de backup, restauração ou compartilhamento, os dados podem ser salvos ou enviados para o local ou aplicativo escolhido pelo próprio usuário, como Google Drive, e-mail, mensageiros ou gerenciadores de arquivos.</p>
+        </section>
 
-A versão mais recente estará disponível na URL informada na página do aplicativo na Google Play Store.
+        <section id="compartilhamento">
+          <h2>4. Compartilhamento de dados</h2>
+          <p>O Call Firewall não vende dados pessoais do usuário.</p>
+          <p>O aplicativo não compartilha automaticamente dados pessoais com terceiros.</p>
+          <p>O compartilhamento só ocorre quando o próprio usuário utiliza uma função do sistema, como:</p>
+          <ul>
+            <li>exportar backup;</li>
+            <li>importar backup;</li>
+            <li>compartilhar regras;</li>
+            <li>salvar arquivo em outro aplicativo ou serviço.</li>
+          </ul>
+          <p>Nesses casos, o tratamento dos dados pelo aplicativo ou serviço escolhido pelo usuário fica sujeito à política de privacidade desse terceiro.</p>
+        </section>
 
-## 11. Contato
+        <section id="backup-android">
+          <h2>5. Backup do Android</h2>
+          <p>Se o backup do Android estiver ativado no dispositivo, o sistema operacional poderá realizar backup automático de dados do aplicativo na conta Google do usuário, conforme as configurações do próprio Android.</p>
+          <p>O usuário pode gerenciar esse recurso nas configurações do dispositivo e da conta Google.</p>
+        </section>
 
-Em caso de dúvidas sobre esta Política de Privacidade, entre em contato:
+        <section id="compras">
+          <h2>6. Compras no aplicativo</h2>
+          <p>O Call Firewall pode oferecer recursos pagos, como desbloqueio da área Pro.</p>
+          <p>As compras são processadas pelo Google Play. O aplicativo não coleta nem armazena dados de cartão de crédito ou informações financeiras do usuário.</p>
+        </section>
 
-PRZM Software  
-E-mail: seu-email@dominio.com
+        <section id="seguranca">
+          <h2>7. Segurança</h2>
+          <p>O aplicativo utiliza mecanismos locais do Android para armazenar seus dados.</p>
+          <p>Embora sejam adotadas práticas razoáveis de segurança, nenhum método de armazenamento ou transmissão é completamente seguro. O usuário deve proteger seu dispositivo com senha, biometria ou outro método de bloqueio.</p>
+        </section>
+
+        <section id="criancas">
+          <h2>8. Crianças</h2>
+          <p>O Call Firewall não é direcionado a crianças menores de 13 anos.</p>
+          <p>O aplicativo é destinado a usuários capazes de configurar regras de chamadas e permissões do dispositivo.</p>
+        </section>
+
+        <section id="exclusao">
+          <h2>9. Exclusão de dados</h2>
+          <p>O usuário pode excluir dados diretamente no aplicativo, usando as opções de limpeza disponíveis.</p>
+          <p>O usuário também pode remover todos os dados do aplicativo desinstalando o Call Firewall ou limpando os dados do aplicativo nas configurações do Android.</p>
+        </section>
+
+        <section id="alteracoes">
+          <h2>10. Alterações nesta política</h2>
+          <p>Esta Política de Privacidade pode ser atualizada periodicamente.</p>
+          <p>A versão mais recente estará disponível na URL informada na página do aplicativo na Google Play Store.</p>
+        </section>
+
+        <section id="contato">
+          <h2>11. Contato</h2>
+          <p>Em caso de dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+          <div class="highlight">
+            <strong>PRZM Software</strong><br />
+            E-mail: <a href="mailto:seu-email@dominio.com">seu-email@dominio.com</a>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <p><strong>Call Firewall</strong> — Política de Privacidade</p>
+    </footer>
+  </main>
+</body>
+</html>
